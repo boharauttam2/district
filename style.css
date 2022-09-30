@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;800&display=swap');
+/* 
+--FONT SIZE
+48/ 39/ 31/ 25/ 20/ 16/ 12/ 10
+*/
+/* 
+WHITESPACE
+2/ 4/ 8/ 12/ 16/ 24/ 28/ 32/ 48/ 64/ 80/ 96/ 128
+*/
+/* --------------------
+GENERAL STYLE
+------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Barlow', sans-serif;
+    padding: 1.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+section {
+    padding: 9.6rem 0;
+}
+
+/* --------------------
+Font
+------------------------*/
+.primary-heading,
+.secondary-heading,
+.tertiary-heading,
+h4 {
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1.6rem;
+}
+
+.primary-heading {
+    font-size: 9rem;
+    margin-bottom: 2.4rem;
+}
+
+.secondary-heading {
+    font-size: 4.8rem;
+}
+
+.tertiary-heading {
+    font-size: 3.1rem;
+}
+
+h4 {
+    font-size: 2.1rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+}
+
+.background {
+    background-color: green;
+    background-position: center;
+    background-size: cover;
+}
+
+.sub-heading {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: small;
+    margin-bottom: 1.2rem;
+}
+
+.margin-right-small {
+    margin-right: 1.2rem !important;
+}
+
+/* --------------------
+Grid
+------------------------*/
+.grid {
+    display: grid;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.grid--col-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* --------------------
+Link hover
+------------------------*/
+.link-hover {
+    display: inline-block;
+    position: relative;
+}
+
+.link-hover:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: ease-out 300ms;
+}
+
+.link-hover:hover:after {
+    width: 100%;
+}
+
+.link-text {
+    text-decoration: none;
+    color: darkred;
+    letter-spacing: 1.2px;
+
+}
+
+/* --------------------
+COMPONENT STYLE
+------------------------*/
+/* --------------------
+Header
+------------------------*/
+.header {
+    padding: 2rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+
+}
+
+/* --------------------
+Navigation
+------------------------*/
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 3.2rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+}
+
+/* --------------------
+Nav link hover effect
+------------------------*/
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: brown;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    opacity: 0;
+    transition: ease-out 400ms;
+}
+
+.nav-list li:hover::after,
+.nav-list li:first-child::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* --------------------
+Hero section
+------------------------*/
+.hero-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+.section-hero {
+    padding: 15rem 0;
+    background-image: url("hero.webp");
+}
+
+.hero-text-box {
+    text-align: center;
+    color: white;
+}
+
+/* --------------------
+Offering
+------------------------*/
+
+.offering-description {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 8rem 2rem;
+
+    min-height: 46rem;
+}
+
+.image {
+    position: relative;
+}
+
+.text-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: ease-out 200ms;
+}
+
+.image:hover img {
+    transition: ease-out 200ms;
+    opacity: 0.10;
+}
+
+.image:hover .text-absolute {
+    opacity: 1;
+}
+
+.image-link {
+    color: black;
+}
+
+.our-store:link,
+.our-store:visited {
+    transition: ease 600ms;
+    border-bottom: 1px solid black;
+}
+
+.our-store:hover,
+.our-store:active {
+    border-bottom: transparent
+}
+
+/* --------------------
+All Products
+------------------------*/
+.section-all-product {
+    height: 70rem;
+    background-image: url("all1.webp"), url("all2.webp"), url("all3.webp");
+    background-size: 40rem 40rem, 40rem 40rem, 40rem 40rem;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left, center, right;
+    position: relative;
+}
+
+.all-product-text-box {
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    gap: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.circle-block {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: lightslategray;
+}
+
+.pagination div:first-child {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.circle-block:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+/* --------------------
+About us
+------------------------*/
+.section-about-us {
+    margin-top: 9rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.526), rgba(128, 128, 128, 0.151)), url("full.webp");
+    color: white;
+    text-align: center;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 1.2rem 2.2rem;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: transparent;
+    outline: 1px solid white;
+}
+
+.about-us-heading {
+    margin-bottom: 4rem;
+}
+
+/* --------------------
+Gallery
+------------------------*/
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 60rem;
+    column-gap: 1.2rem;
+}
+
+.gallery-1-box {
+    background-image: url("full1.webp");
+}
+
+.gallery-2-box {
+    background-image: url("full2.webp");
+}
+
+.gallery-3-box {
+    background-image: url("full3.webp");
+}
+
+.gallery-4-box {
+    background-image: url("full4.webp");
+}
+
+/* --------------------
+Explore the taste
+------------------------*/
+.explore-grid {
+    grid-template-columns: 3fr 1.5fr;
+}
+
+.time-table {
+    border-left: 1px solid black;
+    padding-left: 3rem;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+    margin-top: 1.2rem;
+    display: inline-block;
+    outline: 1px solid black;
+    padding: 1.2rem 2.2rem;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+    background-color: black;
+    color: white;
+}
+
+/* --------------------
+Women Laughing
+------------------------*/
+.women-laughing {
+    background-color: antiquewhite;
+    padding-bottom: 0;
+}
+
+/* --------------------
+Newsletter section
+------------------------*/
+.newsletter-grid {
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+}
+
+.locations {
+    display: flex;
+    gap: 9.6rem;
+    justify-content: center;
+}
+
+.newsletter-heading {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.locations div:nth-child(n+2) {
+    border-left: 1px solid black;
+    padding-left: 3rem;
+}
+
+.form-newsletter {
+    border: 1px solid black;
+    padding: 0.5rem 2.1rem;
+}
+
+.email {
+    border: 0;
+    font-family: inherit;
+}
+
+.email:focus {
+    outline: none;
+}
+
+.button {
+    padding: 1rem;
+    background-color: white;
+    border: 0;
+}
+
+.subscribe-text-box {
+    justify-self: flex-start;
+}
+
+
+/* --------------------
+FOOTER section
+------------------------*/
+.footer-first-section {
+    position: relative;
+}
+
+.footer-first-section:after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    bottom: 20px;
+    ;
+}
+
+.footer-middle-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.footer-list li:nth-child(n+2) {
+    border-left: 1px solid black;
+    padding-left: 1.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: grey;
+}
+
+.footer-last-section {
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.copyright-text {
+    color: grey;
+    font-size: small;
+}
+
+.footer-last-section p {
+    margin: 0;
+}
+
+.logo {
+    color: black;
+    font-size: 2.4rem;
+}
